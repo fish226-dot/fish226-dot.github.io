@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的小小花园 — 个人网站</title>
+  <meta name="description" content="一个简洁、可爱的单页个人网站模板，适合快速上线到 GitHub Pages。" />
+  <style>
+    :root{
+      --bg:#0f1117;          /* 背景 */
+      --panel:#151824;       /* 面板 */
+      --text:#f1f5f9;        /* 正文 */
+      --muted:#cbd5e1;       /* 次要文本 */
+      --brand:#7c3aed;       /* 品牌色 */
+      --brand-2:#06b6d4;     /* 辅助色 */
+      --accent:#22c55e;      /* 强调色 */
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(120deg,var(--bg),#0b0d13);color:var(--text);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;}
+    a{color:var(--brand)}
+    .container{max-width:1050px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(10,12,18,.6);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(124,58,237,.15);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo{width:34px;height:34px;border-radius:12px;background:conic-gradient(from 200deg,var(--brand),var(--brand-2),var(--accent));box-shadow:0 6px 16px rgba(124,58,237,.35)}
+    .nav-links{display:flex;gap:16px;flex-wrap:wrap}
+    .nav a{color:var(--text);text-decoration:none;opacity:.9}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(120deg,var(--brand),var(--brand-2));color:white;text-decoration:none;box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent;border:1px solid rgba(124,58,237,.35);box-shadow:none}
+
+    .hero{padding:64px 0}
+    .hero-card{background:linear-gradient(160deg,rgba(124,58,237,.18),rgba(6,182,212,.12));border:1px solid rgba(124,58,237,.25);border-radius:var(--radius);box-shadow:var(--shadow);padding:36px}
+    .hero h1{margin:0 0 12px;font-size:42px;line-height:1.2}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+
+    .grid{display:grid;gap:18px}
+    @media (min-width: 860px){.grid{grid-template-columns:2fr 1fr}}
+
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    .card h3{margin:0 0 10px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(124,58,237,.15);color:#e9d5ff;font-size:12px;margin-right:6px}
+
+    .projects{display:grid;grid-template-columns:1fr;gap:14px}
+    @media (min-width:700px){.projects{grid-template-columns:1fr 1fr}}
+    .project{background:linear-gradient(160deg,rgba(255,255,255,.03),rgba(124,58,237,.06));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+    .project h4{margin:6px 0}
+    .project p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    footer{margin:26px 0 80px;color:var(--muted);text-align:center}
+    .small{font-size:13px;color:var(--muted)}
+    .kbd{display:inline-block;padding:2px 8px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);font-size:12px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .mt-2{margin-top:12px}.mt-3{margin-top:18px}.mt-4{margin-top:24px}.mt-5{margin-top:30px}
+
+    /* 可选：锚点平滑滚动 */
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo"></div>我的小小花园</div>
+      <nav class="nav-links">
+        <a href="#about">关于我</a>
+        <a href="#projects">作品</a>
+        <a href="#notes">笔记</a>
+        <a href="#contact" class="btn ghost">联系我</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="pill">欢迎光临</span>
+        <h1>嗨，我是 <span style="color:#c4b5fd">你的名字</span>。</h1>
+        <p>这里是我的网络小花园。我写下所想，展示小作品，结识新朋友。🌱</p>
+        <div class="row mt-3">
+          <a class="btn" href="#projects">看看我的作品</a>
+          <a class="btn ghost" href="#contact">给我写信</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section id="about" class="card">
+        <h3>关于我</h3>
+        <p>一句话介绍：例如 “热爱数据和故事的创作者”。
+        你可以在这儿写 2–3 段小简介，告诉大家你做什么、喜欢什么，以及此站点会更新哪些内容。</p>
+        <div class="mt-2 small">提示：按 <span class="kbd">Ctrl</span> + <span class="kbd">F</span> 搜索“你的名字”，快速替换站内文本。</div>
+      </section>
+
+      <aside class="card">
+        <h3>快速名片</h3>
+        <ul>
+          <li>📍 城市：在这儿写
+          <li>💼 职业：在这儿写
+          <li>✉️ 邮箱：<a href="mailto:your@email.com">your@email.com</a>
+          <li>🔗 社交：<a href="#">GitHub</a> · <a href="#">微博</a> · <a href="#">B 站</a>
+        </ul>
+      </aside>
+    </div>
+
+    <section id="projects" class="mt-4">
+      <h3>作品精选</h3>
+      <div class="projects mt-2">
+        <article class="project">
+          <h4>项目 A</h4>
+          <p>一句话介绍项目与链接。<a href="#">访问</a></p>
+        </article>
+        <article class="project">
+          <h4>项目 B</h4>
+          <p>一句话介绍项目与链接。<a href="#">访问</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="notes" class="card mt-4">
+      <h3>最近的笔记</h3>
+      <ul>
+        <li>2025-08-01 · 写点近况或读书摘录
+        <li>2025-07-18 · 我做了一个小小工具
+        <li>2025-07-02 · 旅行里学到的三件事
+      </ul>
+      <p class="small">想写长文？可以把它们放到 <code>/posts/</code> 目录，再从这里链接过去。</p>
+    </section>
+
+    <section id="contact" class="card mt-4">
+      <h3>联系我</h3>
+      <p>喜欢的话，给我写封邮件吧～</p>
+      <p class="row"><a class="btn" href="mailto:your@email.com">📮 发送邮件</a>
+      <a class="btn ghost" href="#">🔗 其他联系方式</a></p>
+    </section>
+
+    <footer class="mt-5 small">© <span id="year"></span> 你的名字 · 用爱与耐心慢慢种花 🌸</footer>
+  </main>
+
+  <script>
+    // 自动年份
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- 使用指南（上线前可删除）：
+  1) 全局替换“你的名字”“your@email.com”等占位符。
+  2) 想加图片：在仓库创建 /assets，把图片放进去，在页面用 <img src="assets/xxx.png" alt="描述">。
+  3) 想加页面：复制本文件为 about.html，改标题，然后把导航里的链接指向 about.html。
+  4) 想换配色：调整 :root 里的 CSS 变量（--brand、--brand-2 等）。
+  5) 想更专业：后续可迁移到框架（如 Next.js）或加文章生成器（如 Jekyll）。
+  -->
+</body>
+</html>
